@@ -58,7 +58,7 @@ export default {
     zIndex: {
       type: Number,
       default: 1,
-    },
+    }, //设置zindex多个弹框组件移动哪一个哪一个层级高
   },
   data() {
     return {
@@ -146,7 +146,7 @@ export default {
         document.onmousemove = null;
         document.onmouseup = null;
         div1.style.zIndex = zindex;
-        that.$emit("change", zindex);
+        that.$emit("enter-mouse-up", zindex);
       };
     },
     close() {
@@ -156,7 +156,7 @@ export default {
       let item = {
         id: this.Id,
       };
-      this.$emit("closeMe", item);
+      this.$emit("close-pop", item);
     },
   },
 };

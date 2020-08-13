@@ -13,8 +13,8 @@
       :minTop="30"
       :minLeft="20"
       :zIndex="zindex"
-      @change="changeHancle"
-      @closeMe="close"
+      @enter-mouse-up="changeHancle"
+      @close-pop="close"
     >
       <div>弹框</div>
     </popout>
